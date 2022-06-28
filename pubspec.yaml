@@ -1,6 +1,6 @@
 name: mapper_box
-description: Simple wrapper to collect object conversion rules.
-version: 1.0.0
+description: This package is simple wrapper for collecting object mapping rules.
+version: 1.0.1
 repository: https://github.com/GlebBatykov/mapper_box
 
 environment:

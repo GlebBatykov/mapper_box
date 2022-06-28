@@ -29,7 +29,7 @@ Add MapperBox to your pubspec.yaml file:
 
 ```dart
 dependencies:
-  mapper_box: ^1.0.0
+  mapper_box: ^1.0.1
 ```
 
 Import ossa in file that it will be used:

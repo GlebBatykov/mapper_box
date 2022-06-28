@@ -29,7 +29,7 @@
 
 ```dart
 dependencies:
-  mapper_box: ^1.0.0
+  mapper_box: ^1.0.1
 ```
 
 Импортируйте ossa в файле где он должен использоваться:
