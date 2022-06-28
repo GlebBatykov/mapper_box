@@ -15,4 +15,11 @@ class MapperCallbackMark {
       return false;
     }
   }
+
+  @override
+  int get hashCode {
+    var hashCode = super.hashCode;
+
+    return hashCode;
+  }
 }

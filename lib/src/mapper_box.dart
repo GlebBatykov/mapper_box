@@ -2,7 +2,7 @@ part of mapper_box;
 
 typedef MapperFactoryCallback<F, S> = FutureOr<S> Function(F object);
 
-///
+/// Сlass that provides access to type conversion rules.
 class MapperBox {
   static MapperBox? _instanse;
 
@@ -10,17 +10,17 @@ class MapperBox {
 
   MapperBox._();
 
-  ///
+  /// Current instanse of MapperBox.
   static MapperBox get instanse {
     return _instanse ?? (_instanse = MapperBox._());
   }
 
-  ///
+  /// Create new current instanse of MapperBox and return instanse.
   static MapperBox get newInstanse {
     return _instanse = MapperBox._();
   }
 
-  ///
+  /// Registers mapper function.
   void register<F, S>(MapperFactoryCallback<F, S> factoryCallback,
       {String? name}) {
     var mark = MapperCallbackMark(F, S);
@@ -32,7 +32,7 @@ class MapperBox {
     }
   }
 
-  ///
+  /// Maps instanse of F to instanse of S.
   S map<F, S>(F object, {String? name}) {
     var mark = MapperCallbackMark(F, S);
 
@@ -49,7 +49,7 @@ class MapperBox {
     return callbacks[name]!.call(object as Object) as S;
   }
 
-  ///
+  /// Asynchronously maps instnase of F to instanse of S.
   Future<S> mapAsync<F, S>(F object, {String? name}) async {
     var mark = MapperCallbackMark(F, S);
 
